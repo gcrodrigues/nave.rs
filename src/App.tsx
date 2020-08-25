@@ -1,10 +1,15 @@
-import React from 'react';
+import React from "react";
+
+import { AuthProvider } from "./contexts/auth";
+import Routes from "./routes";
+import GlobalStyles from "./assets/styles/global";
 
 function App() {
   return (
-    <div >
-      <h1>Olá mundo</h1>
-    </div>
+    <AuthProvider>
+      <Routes />
+      <GlobalStyles />
+    </AuthProvider>
   );
 }
 
